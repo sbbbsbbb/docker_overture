@@ -5,6 +5,7 @@ ENV VERSION=v1.7
 RUN apk add --no-cache git \
     && git clone --depth 1 --branch ${VERSION} https://github.com/shawn1m/overture.git /build \
     && cd /build \
+    && go mod tidy \
     && go build -o overture main/main.go
 
 FROM alpine:latest
