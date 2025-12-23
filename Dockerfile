@@ -16,10 +16,10 @@ RUN set -xe  \
     && apk add --no-cache unzip curl  \
     && mkdir -p "$OVERTURE_HOME" "$DATA_DIR"  "$TMP_DIR" \
     && cd  "$OVERTURE_HOME"  \
-    && curl -fsSLO --compressed "https://github.com/shawn1m/overture/releases/download/${VERSION}/overture-linux-arm64.zip"  \
-    && unzip -o "overture-linux-arm64.zip" -d "$TMP_DIR"  \
-    && mv "$TMP_DIR/overture-linux-arm64" "$OVERTURE_HOME/overture"  \
-    && rm -rf "overture-linux-arm64.zip"  "${TMP_DIR}"\
+    && curl -fsSLO --compressed "https://github.com/shawn1m/overture/releases/download/${VERSION}/overture-linux-arm.zip"  \
+    && unzip -o "overture-linux-arm.zip" -d "$TMP_DIR"  \
+    && mv "$TMP_DIR/overture-linux-arm" "$OVERTURE_HOME/overture"  \
+    && rm -rf "overture-linux-arm.zip"  "${TMP_DIR}"\
     && chmod a+x /getfilter.sh  \
     && sh /getfilter.sh 
     # && chmod a+x /start.sh
