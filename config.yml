@@ -63,8 +63,8 @@ hostsFile:
   hostsFile: ./hosts_sample
   finder: full-map
 minimumTTL: 0
-domainTTLFile: ./domain_ttl_sample
-cacheSize: 1000
+domainTTLFile:
+cacheSize: 0
 cacheRedisUrl:
 cacheRedisConnectionPoolSize:
 rejectQType:
